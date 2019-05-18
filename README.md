@@ -59,9 +59,6 @@
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
 
 Following Peer Dependencies are required for using redux-hooks package:
@@ -72,7 +69,7 @@ Following Peer Dependencies are required for using redux-hooks package:
 ### Installation
 
 ```sh
-npm i redux-hooks -S
+npm i @mollycule/redux-hooks -S
 ```
 
 <!-- USAGE EXAMPLES -->
