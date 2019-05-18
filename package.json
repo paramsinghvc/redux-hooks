@@ -18,6 +18,9 @@
     "typescript",
     "api"
   ],
+  "files": [
+    "dist"
+  ],
   "alias": {
     "react": false,
     "redux": false
