@@ -3,6 +3,7 @@
 [![Build Status][build-shield]]()
 [![MIT License][license-shield]][license-url]
 [![Contributors][contributors-shield]]()
+<img src="https://img.badgesize.io/paramsinghvc/redux-hooks/master/dist/index.js?compression=gzip&label=gzip+size&max=2000&softmax=1500">
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
@@ -20,7 +21,7 @@
     <a href="https://github.com/paramsinghvc/redux-hooks"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/paramsinghvc/redux-hooks">View Demo</a>
+    <a href="https://codesandbox.io/s/typescript-redux-3bb54?fontsize=14">View Demo</a>
     ·
     <a href="https://github.com/paramsinghvc/redux-hooks/issues">Report Bug</a>
     ·
@@ -54,7 +55,7 @@
 ### Built With
 
 - [TypeScript](https://www.typescriptlang.org/)
-- [ParcelJS](https://parceljs.org/)
+- [Webpack](https://webpack.js.org/)
 
 <!-- GETTING STARTED -->
 

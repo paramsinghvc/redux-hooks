@@ -5,9 +5,9 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "build": "npm run build:types && parcel build ./src/index.ts --detailed-report",
+    "build": "webpack",
     "build:types": "tsc --emitDeclarationOnly",
-    "analyse": "source-map-explorer dist/index.js dist/index.js.map"
+    "analyse": "ANALYSE=true webpack"
   },
   "keywords": [
     "react",
@@ -21,21 +21,21 @@
   "files": [
     "dist"
   ],
-  "alias": {
-    "react": false,
-    "redux": false
-  },
   "author": "Param <paramsinghvc@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "parcel-bundler": "^1.12.3",
-    "parcel-plugin-bundle-visualiser": "^1.2.0",
-    "typescript": "^3.4.5"
+    "acorn": "^6.1.1",
+    "clean-webpack-plugin": "^2.0.2",
+    "path": "^0.12.7",
+    "ts-loader": "^6.0.1",
+    "typescript": "^3.4.5",
+    "webpack": "^4.31.0",
+    "webpack-bundle-analyzer": "^3.3.2",
+    "webpack-cli": "^3.3.2"
   },
   "dependencies": {
     "react": "^16.8.6",
-    "redux": "^4.0.1",
-    "source-map-explorer": "^1.8.0"
+    "redux": "^4.0.1"
   },
   "peerDependencies": {
     "react": "^16.8.6",

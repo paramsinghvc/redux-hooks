@@ -3,7 +3,8 @@
         "esModuleInterop": true,
         "jsx": "react",
         "declaration": true,
-        "declarationDir": "./dist"
+        "declarationDir": "./dist",
+        "sourceMap": true
     },
     "include": [
         "./src"
