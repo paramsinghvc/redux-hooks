@@ -17,7 +17,6 @@ import {
 
 import ProviderComponent from "./Provider";
 import { shallowEqual } from "./utils";
-import { Promise } from "q";
 
 export type MapStateToProps<State, TStateProps, TOwnProps> = (
   state: State,

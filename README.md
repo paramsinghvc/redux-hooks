@@ -1,8 +1,9 @@
 <!-- PROJECT SHIELDS -->
 
 [![Build Status][build-shield]]()
-[![Contributors][contributors-shield]]()
 [![MIT License][license-shield]][license-url]
+[![Contributors][contributors-shield]]()
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -69,16 +70,75 @@ Following Peer Dependencies are required for using redux-hooks package:
 ### Installation
 
 ```sh
-npm i @mollycule/redux-hooks -S
+npm i @mollycule/redux-hook -S
 ```
 
 <!-- USAGE EXAMPLES -->
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+1. Wrap the root app component with `redux-hook` provider by calling `createStoreContext<IRootState>` while specifying the shape of Redux App RootState into Generic Parameter.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+```tsx
+import { createStoreContext } from "@mollycule/redux-hook";
+
+const { Provider } = createStoreContext<IRootState>();
+
+class App extends Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <MainComponent />
+      </Provider>
+    );
+  }
+}
+
+export default App;
+```
+
+2. Now, we can simply use the `useRedux` hook anywhere in our app functional components as
+
+```tsx
+import useRedux from "@mollycule/redux-hook";
+import { incrementCount, decrementCount, setIsLoading } from "./actions";
+
+const MyComponent = props => {
+  const mapStateToProps = state => ({
+    count: state.count,
+    isLoading: state.isLoading
+  });
+  const mapDispatchToProps = {
+    incrementCount,
+    decrementCount,
+    setIsLoading
+  };
+  const mappedProps = useRedux(mapStateToProps, mapDispatchToProps);
+  const { count, incrementCounter, setIsLoading } = mappedProps;
+  return (
+    <p onClick={incrementCount} onMouseOver={() => setIsLoading(true)}>
+      {count}
+    </p>
+  );
+};
+```
+
+**Note**: For `mapDispatchToProps`, we can pass a normal function as well that accepts dispatch and returns an object of dispatch bound actions from it as
+
+```ts
+const mapDispatchToProps = dispatch => ({
+  authenticateUser: () => {
+    dispatch({
+      type: "AUTHENTICATE_USER"
+    });
+  },
+  setIsLoading: (status: boolean) => {
+    dispatch(setIsLoading(status));
+  }
+});
+```
+
+Passing simply an object of actions, automatically bind them to dispatch using redux [`bindActionCreators`](https://redux.js.org/api/bindactioncreators). Also, you can even skip the second paramter of useRedux hook if you just want to access the props from the store.
 
 <!-- CONTRIBUTING -->
 
@@ -115,10 +175,10 @@ Project Link: [https://github.com/paramsinghvc/redux-hooks](https://github.com/p
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[build-shield]: https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square
-[contributors-shield]: https://img.shields.io/badge/contributors-1-orange.svg?style=flat-square
-[license-shield]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
+[build-shield]: https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat
+[contributors-shield]: https://img.shields.io/badge/contributors-1-orange.svg?style=flat
+[license-shield]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat
 [license-url]: https://choosealicense.com/licenses/mit
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat&logo=linkedin&colorB=0077B5
+[linkedin-url]: https://www.linkedin.com/in/paramsinghvc
 [product-screenshot]: https://user-images.githubusercontent.com/4329912/57970750-b895d200-79a2-11e9-9fdf-fcf80c8fce28.png
