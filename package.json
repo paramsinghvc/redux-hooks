@@ -2,6 +2,13 @@
   "name": "@mollycule/redux-hook",
   "version": "1.0.3",
   "description": "React hook for using redux in your application",
+  "author": {
+    "name": "Param Singh",
+    "email": "paramsinghvc@gmail.com",
+    "url": "http://paramsinghvc.github.io"
+  },
+  "repository": "https://github.com/paramsinghvc/redux-hooks.git",
+  "homepage": "https://github.com/paramsinghvc/redux-hooks#readme",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -22,7 +29,6 @@
   "files": [
     "dist"
   ],
-  "author": "Param <paramsinghvc@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "acorn": "^6.1.1",

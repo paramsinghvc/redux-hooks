@@ -18,7 +18,7 @@
   <p align="center">
     Making redux easy to use with React Hooks Api
     <br />
-    <a href="https://github.com/paramsinghvc/redux-hooks"><strong>Explore the docs »</strong></a>
+    <a href="https://www.npmjs.com/package/@mollycule/redux-hook"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://codesandbox.io/s/typescript-redux-3bb54?fontsize=14">View Demo</a>
@@ -26,6 +26,8 @@
     <a href="https://github.com/paramsinghvc/redux-hooks/issues">Report Bug</a>
     ·
     <a href="https://github.com/paramsinghvc/redux-hooks/issues">Request Feature</a>
+    .
+    <a href="https://www.npmjs.com/package/@mollycule/redux-hook">NPM Link</a>
   </p>
 </p>
 
