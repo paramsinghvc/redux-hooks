@@ -1,6 +1,6 @@
 {
   "name": "@mollycule/redux-hook",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React hook for using redux in your application",
   "main": "dist/index.js",
   "module": "dist/index.js",
