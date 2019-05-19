@@ -3,7 +3,7 @@
 [![Build Status][build-shield]]()
 [![MIT License][license-shield]][license-url]
 [![Contributors][contributors-shield]]()
-<img src="https://img.badgesize.io/paramsinghvc/redux-hooks/master/dist/index.js?compression=gzip&label=gzip+size&max=2000&softmax=1500">
+<img src="https://img.badgesize.io/paramsinghvc/redux-hooks/master/dist/index.js?compression=gzip&label=gzip+size&max=3000&softmax=2000">
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
