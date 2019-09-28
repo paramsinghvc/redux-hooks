@@ -76,7 +76,7 @@ const useRedux = <
     []
   );
   /** Maintaining a reference of the mappedState across re-renders */
-  const mappedState = useRef(memoizedMapStateToProps(state, ownProps));
+  const mappedState = useRef<TStateProps>();
   const mappedDispatchProps = useRef(
     memoizedMapDispatchToProps(dispatch, ownProps)
   );
@@ -106,7 +106,9 @@ const useRedux = <
   }, [store]);
   /* Returning both the mappedStateProps and mappedDispatchProps in the end */
   return {
-    ...mappedState.current,
+    ...(mappedState.current
+      ? mappedState.current
+      : memoizedMapStateToProps(state, ownProps)),
     ...mappedDispatchProps.current
   };
 };
