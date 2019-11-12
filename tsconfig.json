@@ -4,7 +4,9 @@
         "jsx": "react",
         "declaration": true,
         "declarationDir": "./dist",
-        "sourceMap": true
+        "sourceMap": true,
+        "strict": true,
+        "noImplicitAny": false
     },
     "include": [
         "./src"

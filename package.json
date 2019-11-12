@@ -41,6 +41,8 @@
     "webpack-cli": "^3.3.2"
   },
   "dependencies": {
+    "@types/react": "^16.9.11",
+    "@types/redux": "^3.6.0",
     "react": "^16.8.6",
     "redux": "^4.0.1"
   },
